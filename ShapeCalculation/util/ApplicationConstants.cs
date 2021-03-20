@@ -15,7 +15,7 @@ namespace ShapeCalculation.util
 
         public static class ShapeName
         {
-            public static String SQUARE = "area";
+            public static String SQUARE = "square";
             public static String TRIANGLE = "triangle";
             public static String RECTANGLE = "rectangle";
 

@@ -7,6 +7,6 @@ namespace ShapeCalculation.adapter
 {
     interface Input
     {
-        public double getValue(InputDto input);
+        public double getCalculatedValue(InputDto input);
     }
 }
