@@ -27,9 +27,9 @@ namespace ShapeCalculation.adapter
 
             Factory factory = new FactoryShape();
 
-            shape = factory.create(inputDto.ShapeName, inputAdapterDto.Values);
+            shape = factory.create(inputAdapterDto);
 
-            return isAreaOperation(inputDto.Operation) ? callAreaCalculation() : callPerimeterCalculation();
+            return isAreaOperation(inputAdapterDto.Operation) ? callAreaCalculation() : callPerimeterCalculation();
             
         }
 
