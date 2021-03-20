@@ -10,17 +10,18 @@ namespace ShapeCalculation
         {
             Console.WriteLine("Enter the value of the shape:");
             string shapeName = Console.ReadLine();
-            Console.WriteLine("Enter the value of the sides:");
+            Console.WriteLine("Enter the values of the sides, separated by comma if it's necessary:");
             string sideValues = Console.ReadLine();
             Console.WriteLine("Enter the operation:");
             string operation = Console.ReadLine();
 
             InputDto inputDto = new InputDto(shapeName, operation, sideValues);
-            Input input = new ControllerShape();
+            ManageInput input = new ControllerShape(inputDto);
 
             try
             {
-                input.getCalculatedValue(inputDto);
+                double response = input.getCalculatedValue();
+                Console.WriteLine(response);
             }
             catch (Exception e) {
                 Console.WriteLine(e.Message);

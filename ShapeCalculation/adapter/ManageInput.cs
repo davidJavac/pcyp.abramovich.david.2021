@@ -5,8 +5,8 @@ using System.Text;
 
 namespace ShapeCalculation.adapter
 {
-    interface Input
+    interface ManageInput
     {
-        public double getCalculatedValue(InputDto input);
+        public double getCalculatedValue();
     }
 }
