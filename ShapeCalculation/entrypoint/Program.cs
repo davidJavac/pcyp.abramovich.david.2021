@@ -17,7 +17,14 @@ namespace ShapeCalculation
 
             InputDto inputDto = new InputDto(shapeName, operation, sideValues);
             Input input = new ControllerShape();
-            input.getValue(inputDto);
+
+            try
+            {
+                input.getCalculatedValue(inputDto);
+            }
+            catch (Exception e) {
+                Console.WriteLine(e.Message);
+            }
 
         }
     }

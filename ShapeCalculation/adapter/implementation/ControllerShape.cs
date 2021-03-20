@@ -15,11 +15,11 @@ namespace ShapeCalculation.adapter
             this.values = new List<Double>();
         }
 
-        public double getValue(InputDto input)
+        public double getCalculatedValue(InputDto input)
         {
-            validateAmountOfSides(input);
-
             convertedSidesToDouble(input.Values);
+
+            validateAmountOfSides(input);
 
             Factory factory = new FactoryShape();
 
