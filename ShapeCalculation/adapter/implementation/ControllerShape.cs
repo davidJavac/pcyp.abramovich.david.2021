@@ -6,6 +6,7 @@ using ShapeCalculation.util;
 using ShapeCalculation.adapter.exception;
 using ShapeCalculation.adapter.validation;
 using ShapeCalculation.config;
+using System.Globalization;
 
 namespace ShapeCalculation.adapter
 {
@@ -51,7 +52,7 @@ namespace ShapeCalculation.adapter
             String[] splitedValues = inputDto.Values.Split(",");
 
             foreach(String s in splitedValues) {
-                this.inputAdapterDto.Values.Add(Convert.ToDouble(s));
+                this.inputAdapterDto.Values.Add(double.Parse(s, CultureInfo.InvariantCulture));
             }
             
         }
