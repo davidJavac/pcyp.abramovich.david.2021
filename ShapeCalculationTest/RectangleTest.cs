@@ -1,6 +1,7 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using ShapeCalculation;
 using ShapeCalculation.usecase;
+using ShapeCalculation.usecase.exception;
 using System;
 
 namespace ShapeCalculationTest
@@ -33,6 +34,16 @@ namespace ShapeCalculationTest
             double perimeter = rectangle.getPerimeter();
 
             Assert.AreEqual(expectedPerimeter, perimeter);
+        }
+        
+        [TestMethod]
+        [ExpectedException(typeof(NegativeValueException))]
+        public void when_at_least_one_side_is_0_or_less_than_0_then_it_should_throw_exception()
+        {
+
+            Rectangle rectangle = new Rectangle(2, -2);
+            rectangle.calculateArea();
+            rectangle.calculatePerimeter();
         }
     }
 }

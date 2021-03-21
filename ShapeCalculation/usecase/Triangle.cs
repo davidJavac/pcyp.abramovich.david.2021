@@ -22,19 +22,19 @@ namespace ShapeCalculation
         public override void calculateArea()
         {
             invokeValidations();
-            calculatePerimeter();
-            double s = this.perimeter / 2;
+            double s = (sideA + sideB + sideC) / 2;
             this.area = Math.Sqrt(s * (s - sideA) * (s - sideB) * (s - sideC));
         }
 
         public override void calculatePerimeter()
         {
+            invokeValidations();
             this.perimeter = sideA + sideB + sideC;   
         }
 
         protected override void invokeValidations()
         {
-            ModuleConfig.getValidateValues().ForEach(val => val.execute(sideA, sideB, sideC));
+            ModuleConfig.getValidateTriangleValues().ForEach(val => val.execute(sideA, sideB, sideC));
         }
     }
 }

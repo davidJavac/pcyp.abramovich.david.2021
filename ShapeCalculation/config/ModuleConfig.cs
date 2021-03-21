@@ -26,11 +26,19 @@ namespace ShapeCalculation.config
             return listValidateAdapter;
         }
 
-        public static List<ValidateValues<Double>> getValidateValues()
+        public static List<ValidateValues<Double>> getValidateTriangleValues()
+
+        {
+            List<ValidateValues<Double>> listValidateValues = getCommonValidateValues();
+            listValidateValues.Add(new ValidateSizeOfSidesInTriangle());
+            return listValidateValues;
+        }
+
+        public static List<ValidateValues<Double>> getCommonValidateValues()
 
         {
             List<ValidateValues<Double>> listValidateValues = new List<ValidateValues<Double>>();
-            listValidateValues.Add(new ValidateSizeOfSidesInTriangle());
+            listValidateValues.Add(new ValidateNegativeValues());
             return listValidateValues;
         }
     }

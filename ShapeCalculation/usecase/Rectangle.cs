@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ShapeCalculation.config;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -17,17 +18,19 @@ namespace ShapeCalculation.usecase
 
         public override void calculateArea()
         {
+            invokeValidations();
             this.area = sideA * sideB;
         }
 
         public override void calculatePerimeter()
         {
+            invokeValidations();
             this.perimeter = 2 * (sideA + sideB);
         }
 
         protected override void invokeValidations()
         {
-            throw new NotImplementedException();
+            ModuleConfig.getCommonValidateValues().ForEach(val => val.execute(sideA, sideB));
         }
     }
 }
