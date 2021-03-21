@@ -4,7 +4,7 @@ using System.Text;
 
 namespace ShapeCalculation
 {
-    class Square : Shape
+    public class Square : Shape
     {
         private double side;
 

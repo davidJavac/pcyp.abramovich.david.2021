@@ -4,7 +4,7 @@ using System.Text;
 
 namespace ShapeCalculation.usecase
 {
-    class Rectangle : Shape
+    public class Rectangle : Shape
     {
         private double sideA;
         private double sideB;

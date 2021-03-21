@@ -4,7 +4,7 @@ using System.Text;
 
 namespace ShapeCalculation
 {
-    class Triangle : Shape
+    public class Triangle : Shape
     {
         private double sideA;
         private double sideB;
