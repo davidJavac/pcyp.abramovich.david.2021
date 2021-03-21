@@ -23,6 +23,11 @@ namespace ShapeCalculation
             this.perimeter = side * 4;
         }
 
+        protected override void invokeValidations()
+        {
+            throw new NotImplementedException();
+        }
+
         public void setSide(double side) {
             this.side = side;
         }

@@ -1,4 +1,6 @@
-﻿using System;
+﻿using ShapeCalculation.config;
+using ShapeCalculation.usecase.validation;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -19,6 +21,7 @@ namespace ShapeCalculation
 
         public override void calculateArea()
         {
+            invokeValidations();
             calculatePerimeter();
             double s = this.perimeter / 2;
             this.area = Math.Sqrt(s * (s - sideA) * (s - sideB) * (s - sideC));
@@ -29,5 +32,9 @@ namespace ShapeCalculation
             this.perimeter = sideA + sideB + sideC;   
         }
 
+        protected override void invokeValidations()
+        {
+            ModuleConfig.getValidateValues().ForEach(val => val.execute(sideA, sideB, sideC));
+        }
     }
 }

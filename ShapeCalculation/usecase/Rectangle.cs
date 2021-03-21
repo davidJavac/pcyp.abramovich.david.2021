@@ -25,5 +25,9 @@ namespace ShapeCalculation.usecase
             this.perimeter = 2 * (sideA + sideB);
         }
 
+        protected override void invokeValidations()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
