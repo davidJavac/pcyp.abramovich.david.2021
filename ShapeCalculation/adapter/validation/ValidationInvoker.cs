@@ -4,7 +4,7 @@ using System.Text;
 
 namespace ShapeCalculation.adapter.validation
 {
-    abstract class ValidationInvoker
+    public abstract class ValidationInvoker
     {
         abstract protected void invokeValidations();
     }

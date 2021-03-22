@@ -10,7 +10,7 @@ using System.Globalization;
 
 namespace ShapeCalculation.adapter
 {
-    class ControllerShape : ValidationInvoker, ManageInput
+    public class ControllerShape : ValidationInvoker, ManageInput
     {
         private InputDto inputDto;
         private InputAdapterDto inputAdapterDto;

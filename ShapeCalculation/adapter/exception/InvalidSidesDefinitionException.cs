@@ -4,7 +4,7 @@ using System.Text;
 
 namespace ShapeCalculation.adapter.exception
 {
-    class InvalidSidesDefinitionException : Exception
+    public class InvalidSidesDefinitionException : Exception
     {
          public InvalidSidesDefinitionException() : base("The sides must be separated by comma") { }
     

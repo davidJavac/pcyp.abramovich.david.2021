@@ -6,7 +6,7 @@ using System.Text;
 
 namespace ShapeCalculation.adapter.dto
 {
-    class InputDto : ValidationInvoker
+    public class InputDto : ValidationInvoker
     {
         private String shapeName;
         private String operation;

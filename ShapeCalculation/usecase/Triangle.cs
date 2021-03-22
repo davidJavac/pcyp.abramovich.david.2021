@@ -1,10 +1,12 @@
-﻿using System;
+﻿using ShapeCalculation.config;
+using ShapeCalculation.usecase.validation;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace ShapeCalculation
 {
-    class Triangle : Shape
+    public class Triangle : Shape
     {
         private double sideA;
         private double sideB;
@@ -19,15 +21,20 @@ namespace ShapeCalculation
 
         public override void calculateArea()
         {
-            calculatePerimeter();
-            double s = this.perimeter / 2;
+            invokeValidations();
+            double s = (sideA + sideB + sideC) / 2;
             this.area = Math.Sqrt(s * (s - sideA) * (s - sideB) * (s - sideC));
         }
 
         public override void calculatePerimeter()
         {
+            invokeValidations();
             this.perimeter = sideA + sideB + sideC;   
         }
 
+        protected override void invokeValidations()
+        {
+            ModuleConfig.getValidateTriangleValues().ForEach(val => val.execute(sideA, sideB, sideC));
+        }
     }
 }
