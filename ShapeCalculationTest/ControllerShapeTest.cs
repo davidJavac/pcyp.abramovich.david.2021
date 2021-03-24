@@ -3,80 +3,65 @@ using ShapeCalculation.adapter;
 using ShapeCalculation.adapter.exception;
 using ShapeCalculation.adapter.dto;
 using System;
+using ShapeCalculation.usecase.dto;
+using ShapeCalculation.util;
 
 namespace ShapeCalculationTest
 {
     [TestClass]
     public class ControllerShapeTest
     {
-        [TestInitialize]
-        public void testInitialize() { 
-            
+
+        [TestMethod]
+        public void when_the_input_is_correct_then_it_should_return_a_successfull_response() {
+
+            OutputDto expectedOutput = new OutputDto(
+                    ApplicationConstants.ShapeName.SQUARE,
+                    ApplicationConstants.Operation.AREA,
+                    4,
+                    ApplicationConstants.Status.SUCCESS,
+                    "Operation ran successfully");
+
+            InputDto inputDto = new InputDto("square", "area", "2");
+
+            ManageInput manageInput = new ControllerShape(inputDto);
+
+            OutputDto response = manageInput.execute();
+
+            Assert.IsNotNull(response);
+            Assert.AreEqual(expectedOutput.Shape, response.Shape);
+            Assert.AreEqual(expectedOutput.Operation, response.Operation);
+            Assert.AreEqual(expectedOutput.ResponseStatus, response.ResponseStatus);
+            Assert.AreEqual(expectedOutput.ValueResponse, response.ValueResponse);
+            Assert.AreEqual(expectedOutput.Message, response.Message);
+
         }
 
         [TestMethod]
-        public void when_the_input_is_correct_then_it_should_return_double_value() { 
-
-            InputDto inputDto = new InputDto("square", "area", "2.5");
-
-            ControllerShape controllerShape = new ControllerShape(inputDto);
-
-            double valueResponse = controllerShape.getCalculatedValue();
-
-            Assert.IsNotNull(valueResponse);
-         
-        }
-
-        [TestMethod]
-        [ExpectedException(typeof(InvalidAmountOfSidesException))]
-        public void when_the_input_amount_sides_is_not_correct_then_it_should_throw_exception()
+        public void when_the_input_is_not_correct_then_it_should_return_an_error_response()
         {
 
-            InputDto inputDto = new InputDto("square", "area", "2.5,4");
+            OutputDto expectedOutput = new OutputDto(
+                    "squar",
+                    ApplicationConstants.Operation.AREA,
+                    0,
+                    ApplicationConstants.Status.ERROR,
+                    "The name of the shape is not valid");
 
-            ControllerShape controllerShape = new ControllerShape(inputDto);
+            InputDto inputDto = new InputDto("squar", "area", "2");
 
-            controllerShape.getCalculatedValue();
+            ManageInput manageInput = new ControllerShape(inputDto);
 
-        }
+            OutputDto response = manageInput.execute();
 
-        [TestMethod]
-        [ExpectedException(typeof(InvalidShapeNameException))]
-        public void when_the_input_shape_name_is_not_correct_then_it_should_throw_exception()
-        {
-
-            InputDto inputDto = new InputDto("circle", "area", "2.5");
-
-            ControllerShape controllerShape = new ControllerShape(inputDto);
-
-            controllerShape.getCalculatedValue();
-
-        }
-
-        [TestMethod]
-        [ExpectedException(typeof(InvalidOperationNameException))]
-        public void when_the_input_operation_name_is_not_correct_then_it_should_throw_exception()
-        {
-
-            InputDto inputDto = new InputDto("square", "ratio", "2.5");
-
-            ControllerShape controllerShape = new ControllerShape(inputDto);
-
-            controllerShape.getCalculatedValue();
+            Assert.IsNotNull(response);
+            Assert.AreEqual(expectedOutput.Shape, response.Shape);
+            Assert.AreEqual(expectedOutput.Operation, response.Operation);
+            Assert.AreEqual(expectedOutput.ResponseStatus, response.ResponseStatus);
+            Assert.AreEqual(expectedOutput.ValueResponse, response.ValueResponse);
+            Assert.AreEqual(expectedOutput.Message, response.Message);
 
         }
 
-        [TestMethod]
-        [ExpectedException(typeof(InvalidSidesDefinitionException))]
-        public void when_the_input_amount_sides_is_higer_than_one_and_is_not_separated_by_comma__then_it_should_throw_exception()
-        {
-
-            InputDto inputDto = new InputDto("triangle", "perimeter", "2.5:3");
-
-            ControllerShape controllerShape = new ControllerShape(inputDto);
-
-            controllerShape.getCalculatedValue();
-
-        }
     }
 }

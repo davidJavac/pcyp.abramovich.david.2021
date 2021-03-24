@@ -4,7 +4,7 @@ using System.Text;
 
 namespace ShapeCalculation.util
 {
-    class ApplicationConstants
+    public class ApplicationConstants
     {
         public static class Operation { 
 

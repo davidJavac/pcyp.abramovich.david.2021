@@ -20,7 +20,7 @@ namespace ShapeCalculation.usecase.implementation
 
                 invokeValidations();
 
-                shape = input.Shape;
+                shape = this.input.Shape;
 
                 double response = isAreaOperation(input.Operation) ? callAreaCalculation() : callPerimeterCalculation();
 

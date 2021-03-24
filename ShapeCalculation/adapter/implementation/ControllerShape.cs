@@ -61,10 +61,10 @@ namespace ShapeCalculation.adapter
         private OutputDto prepareErrorResponse(string message)
         {
             return new OutputDto(inputDto.ShapeName,
-                    inputDto.Operation,
-                    0,
-                    ApplicationConstants.Status.ERROR,
-                    message);
+                inputDto.Operation,
+                0,
+                ApplicationConstants.Status.ERROR,
+                message);
 
         }
 
