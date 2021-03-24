@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace ShapeCalculation.adapter.validation
+namespace ShapeCalculation.usecase.validation
 {
     public abstract class ValidationInvoker
     {

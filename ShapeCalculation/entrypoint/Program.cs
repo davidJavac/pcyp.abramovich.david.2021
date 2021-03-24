@@ -1,6 +1,8 @@
 ﻿using System;
 using ShapeCalculation.adapter;
 using ShapeCalculation.adapter.dto;
+using ShapeCalculation.adapter.implementation;
+using ShapeCalculation.usecase.dto;
 
 namespace ShapeCalculation
 {
@@ -17,16 +19,12 @@ namespace ShapeCalculation
             string operation = Console.ReadLine();
 
             InputDto inputDto = new InputDto(shapeName, operation, sideValues);
-            ManageInput input = new ControllerShape(inputDto);
+            ManageInput manageInput = new ControllerShape(inputDto);
 
-            try
-            {
-                double response = input.getCalculatedValue();
-                Console.WriteLine(response);
-            }
-            catch (Exception e) {
-                Console.WriteLine(e.Message);
-            }
+            OutputDto response = manageInput.execute();
+
+            ManageOutput manageOutput = new PresenterResponse();
+            manageOutput.execute(response);
 
         }
     }

@@ -9,6 +9,7 @@ namespace ShapeCalculation
         protected double area;
         protected double perimeter;
 
+        public abstract String getName();
         public abstract void calculateArea();
         public abstract void calculatePerimeter();
 

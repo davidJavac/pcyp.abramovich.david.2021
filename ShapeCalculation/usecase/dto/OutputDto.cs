@@ -4,10 +4,27 @@ using System.Text;
 
 namespace ShapeCalculation.usecase.dto
 {
-    class OutputDto
+    public class OutputDto
     {
-        private double value;
+        private String shape;
+        private String operation;
+        private Double valueResponse;
+        private String responseStatus;
+        private String message;
 
-        public double Value { get => value; set => this.value = value; }
+        public OutputDto(string shape, string operation, double valueResponse, string responseStatus, string message)
+        {
+            this.Shape = shape;
+            this.Operation = operation;
+            this.ValueResponse = valueResponse;
+            this.ResponseStatus = responseStatus;
+            this.Message = message;
+        }
+
+        public string Shape { get => shape; set => shape = value; }
+        public string Operation { get => operation; set => operation = value; }
+        public double ValueResponse { get => valueResponse; set => valueResponse = value; }
+        public string ResponseStatus { get => responseStatus; set => responseStatus = value; }
+        public string Message { get => message; set => message = value; }
     }
 }

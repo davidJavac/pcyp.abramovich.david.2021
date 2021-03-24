@@ -1,4 +1,4 @@
-﻿using ShapeCalculation.adapter.validation;
+﻿using ShapeCalculation.usecase.validation;
 using ShapeCalculation.config;
 using System;
 using System.Collections.Generic;
@@ -25,11 +25,17 @@ namespace ShapeCalculation.adapter.dto
         public void callValidations() {
             try
             {
+                normalize();
                 this.invokeValidations();
             }
             catch (Exception e) {
                 throw e;
             }
+        }
+
+        private void normalize() {
+            shapeName = shapeName.ToLower();
+            operation = operation.ToLower();
         }
 
         protected override void invokeValidations() {

@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using ShapeCalculation.adapter;
 using ShapeCalculation.adapter.validation;
 using ShapeCalculation.adapter.validation.implementation;
+using ShapeCalculation.usecase.dto;
 using ShapeCalculation.usecase.validation;
 using ShapeCalculation.usecase.validation.implementation;
 
@@ -40,6 +42,13 @@ namespace ShapeCalculation.config
             List<ValidateValues<Double>> listValidateValues = new List<ValidateValues<Double>>();
             listValidateValues.Add(new ValidateNegativeValues());
             return listValidateValues;
+        }
+
+        public static Shape createShape(String shapeName, List<Double> values) {
+
+            Factory factory = new FactoryShape();
+
+            return factory.create(shapeName, values);
         }
     }
 }

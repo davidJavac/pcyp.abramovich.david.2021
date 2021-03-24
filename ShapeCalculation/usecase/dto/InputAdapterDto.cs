@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace ShapeCalculation.adapter.dto
+namespace ShapeCalculation.usecase.dto
 {
     class InputAdapterDto
     {
-        private String shapeName;
+        private Shape shape;
         private String operation;
         private List<Double> values;
 
@@ -14,13 +14,13 @@ namespace ShapeCalculation.adapter.dto
             this.values = new List<Double>();
         }
 
-        public InputAdapterDto(String shapeName, String operation, List<Double> values) {
-            this.shapeName = shapeName;
+        public InputAdapterDto(Shape shape, String operation, List<Double> values) {
+            this.shape = shape;
             this.operation = operation;
             this.values = values;
         }
 
-        public string ShapeName { get => shapeName; set => shapeName = value; }
+        public Shape Shape { get => shape; set => shape = value; }
         public string Operation { get => operation; set => operation = value; }
         public List<double> Values { get => values; set => values = value; }
     }
