@@ -20,5 +20,12 @@ namespace ShapeCalculation.util
             public static String RECTANGLE = "rectangle";
 
         }
+
+        public static class Status {
+
+            public static String SUCCESS = "success";
+            public static String ERROR = "error";
+        }
+
     }
 }

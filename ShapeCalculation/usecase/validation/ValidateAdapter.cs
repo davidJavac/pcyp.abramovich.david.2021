@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using ShapeCalculation.adapter.dto;
+using ShapeCalculation.usecase.dto;
 
-namespace ShapeCalculation.adapter.validation
+namespace ShapeCalculation.usecase.validation
 {
     interface ValidateAdapter
     {

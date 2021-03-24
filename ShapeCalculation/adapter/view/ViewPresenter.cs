@@ -3,10 +3,10 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace ShapeCalculation.adapter
+namespace ShapeCalculation.adapter.view
 {
-    interface ManageInput
+    interface ViewPresenter
     {
-        public OutputDto execute();
+        public void execute(OutputDto outpu);
     }
 }

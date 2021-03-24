@@ -1,12 +1,13 @@
 ﻿using ShapeCalculation.adapter.dto;
+using ShapeCalculation.usecase.dto;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace ShapeCalculation.adapter
+namespace ShapeCalculation.config
 {
     interface Factory
     {
-        Shape create(InputAdapterDto inputAdapterDto);
+        Shape create(String shapeName, List<Double> values);
     }
 }

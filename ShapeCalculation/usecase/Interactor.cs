@@ -3,10 +3,10 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace ShapeCalculation.adapter
+namespace ShapeCalculation.usecase
 {
-    interface ManageInput
+    interface Interactor
     {
-        public OutputDto execute();
+        public OutputDto execute(InputAdapterDto input);
     }
 }

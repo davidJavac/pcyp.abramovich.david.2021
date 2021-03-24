@@ -1,54 +1,55 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using ShapeCalculation.usecase.dto;
 using ShapeCalculation.adapter.dto;
 using ShapeCalculation.util;
 using ShapeCalculation.adapter.exception;
 using ShapeCalculation.adapter.validation;
 using ShapeCalculation.config;
 using System.Globalization;
+using ShapeCalculation.usecase.implementation;
+using ShapeCalculation.usecase;
 
 namespace ShapeCalculation.adapter
 {
-    public class ControllerShape : ValidationInvoker, ManageInput
+    public class ControllerShape : ManageInput
     {
         private InputDto inputDto;
         private InputAdapterDto inputAdapterDto;
-        private Shape shape;
+        
         public ControllerShape(InputDto inputDto) {
             this.inputAdapterDto = new InputAdapterDto();
             this.inputDto = inputDto;
             
         }
 
-        public double getCalculatedValue()
+        public OutputDto execute()
         {
-            try { invokeValidations(); } 
-            catch (Exception e) { throw e; }
+            try
+            {
+                inputDto.callValidations();
+                addValuesFromInputToAdapter();
 
-            Factory factory = new FactoryShape();
+                Shape shape = ModuleConfig.createShape(inputDto.ShapeName, inputAdapterDto.Values);
 
-            shape = factory.create(inputAdapterDto);
+                inputAdapterDto.Shape = shape;
 
-            return isAreaOperation(inputAdapterDto.Operation) ? callAreaCalculation() : callPerimeterCalculation();
+                Interactor shapeInteractor = new ShapeInteractor();
+
+                return shapeInteractor.execute(inputAdapterDto);
+            }
+            catch (Exception e) {
+
+                return prepareErrorResponse(e.Message);
+            }
             
-        }
-
-        private bool isAreaOperation(String operation) {
-            return (operation.Equals(ApplicationConstants.Operation.AREA, 
-                StringComparison.InvariantCultureIgnoreCase));
-        }
-
-        private bool isPerimeterOperation(String operation)
-        {
-            return (operation.Equals(ApplicationConstants.Operation.PERIMETER, 
-                StringComparison.InvariantCultureIgnoreCase));
         }
 
         private void addValuesFromInputToAdapter() {
 
             inputAdapterDto.Operation = inputDto.Operation;
-            inputAdapterDto.ShapeName = inputDto.ShapeName;
+            
             String[] splitedValues = inputDto.Values.Split(",");
 
             foreach(String s in splitedValues) {
@@ -57,23 +58,15 @@ namespace ShapeCalculation.adapter
             
         }
 
-        private double callAreaCalculation() {
-            shape.calculateArea();
-            return shape.getArea();
+        private OutputDto prepareErrorResponse(string message)
+        {
+            return new OutputDto(inputDto.ShapeName,
+                    inputDto.Operation,
+                    0,
+                    ApplicationConstants.Status.ERROR,
+                    message);
+
         }
 
-        private double callPerimeterCalculation()
-        {
-            shape.calculatePerimeter();
-            return shape.getPerimeter();
-        }
-
-        protected override void invokeValidations()
-        {
-            inputDto.callValidations();
-            addValuesFromInputToAdapter();
-            ModuleConfig.getValidateAdapter().ForEach(val => val.execute(inputAdapterDto));
-            
-        }
     }
 }

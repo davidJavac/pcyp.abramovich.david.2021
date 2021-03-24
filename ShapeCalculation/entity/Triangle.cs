@@ -1,5 +1,6 @@
 ﻿using ShapeCalculation.config;
 using ShapeCalculation.usecase.validation;
+using ShapeCalculation.util;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -30,6 +31,11 @@ namespace ShapeCalculation
         {
             invokeValidations();
             this.perimeter = sideA + sideB + sideC;   
+        }
+
+        public override string getName()
+        {
+            return ApplicationConstants.ShapeName.TRIANGLE;
         }
 
         protected override void invokeValidations()

@@ -1,17 +1,17 @@
-﻿using ShapeCalculation.adapter.dto;
+﻿using ShapeCalculation.usecase.dto;
 using ShapeCalculation.adapter.exception;
 using System;
 using System.Collections.Generic;
 using System.Text;
 using ShapeCalculation.util;
 
-namespace ShapeCalculation.adapter.validation.implementation
+namespace ShapeCalculation.usecase.validation.implementation
 {
     class ValidateAmountOfSides : ValidateAdapter
     {
         public void execute(InputAdapterDto inputAdapterDto)
         {
-            String shapeName = inputAdapterDto.ShapeName;
+            String shapeName = inputAdapterDto.Shape.getName();
             List<Double> values = inputAdapterDto.Values;
 
             if ((shapeName.Equals(ApplicationConstants.ShapeName.SQUARE,
