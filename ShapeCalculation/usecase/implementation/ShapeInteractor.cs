@@ -3,8 +3,7 @@ using ShapeCalculation.usecase.dto;
 using ShapeCalculation.usecase.validation;
 using ShapeCalculation.util;
 using System;
-using System.Collections.Generic;
-using System.Text;
+
 
 namespace ShapeCalculation.usecase.implementation
 {

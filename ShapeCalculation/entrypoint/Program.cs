@@ -2,8 +2,6 @@
 using ShapeCalculation.adapter;
 using ShapeCalculation.adapter.dto;
 using ShapeCalculation.adapter.implementation;
-using ShapeCalculation.adapter.view;
-using ShapeCalculation.adapter.view.implementation;
 using ShapeCalculation.usecase.dto;
 
 namespace ShapeCalculation
