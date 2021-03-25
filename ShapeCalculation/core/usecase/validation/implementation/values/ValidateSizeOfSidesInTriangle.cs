@@ -1,4 +1,7 @@
-﻿using ShapeCalculation.usecase.exception;
+﻿using ShapeCalculation.adapter.validation;
+using ShapeCalculation.core.usecase.validation;
+using ShapeCalculation.usecase.dto;
+using ShapeCalculation.usecase.exception;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -7,7 +10,7 @@ namespace ShapeCalculation.usecase.validation.implementation
 {
     class ValidateSizeOfSidesInTriangle : ValidateValues<Double>
     {
-        public void execute(params Double [] values)
+        public void execute(params Double[] values)
         {
             double sideA = values[0];
             double sideB = values[1];

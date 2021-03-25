@@ -5,7 +5,7 @@ using System.Text;
 
 namespace ShapeCalculation.usecase
 {
-    interface Interactor
+    public interface Interactor
     {
         public OutputDto execute(InputAdapterDto input);
     }

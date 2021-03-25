@@ -19,13 +19,11 @@ namespace ShapeCalculation.usecase
 
         public override void calculateArea()
         {
-            invokeValidations();
             this.area = sideA * sideB;
         }
 
         public override void calculatePerimeter()
         {
-            invokeValidations();
             this.perimeter = 2 * (sideA + sideB);
         }
 
@@ -36,7 +34,6 @@ namespace ShapeCalculation.usecase
 
         protected override void invokeValidations()
         {
-            ModuleConfig.getCommonValidateValues().ForEach(val => val.execute(sideA, sideB));
         }
     }
 }

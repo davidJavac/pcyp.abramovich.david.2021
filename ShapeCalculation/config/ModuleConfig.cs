@@ -2,8 +2,10 @@
 using System.Collections.Generic;
 using System.Text;
 using ShapeCalculation.adapter;
+using ShapeCalculation.adapter.dto;
 using ShapeCalculation.adapter.validation;
 using ShapeCalculation.adapter.validation.implementation;
+using ShapeCalculation.core.usecase.validation;
 using ShapeCalculation.usecase.dto;
 using ShapeCalculation.usecase.validation;
 using ShapeCalculation.usecase.validation.implementation;
@@ -11,19 +13,19 @@ using ShapeCalculation.usecase.validation.implementation;
 
 namespace ShapeCalculation.config
 {
-    class ModuleConfig
+    public class ModuleConfig
     {
-        public static List<ValidateInput> getValidateInput() {
-            List<ValidateInput> listValidateInput = new List<ValidateInput>();
+        public static List<ValidateInput<InputDto>> getValidateInput() {
+            List<ValidateInput<InputDto>> listValidateInput = new List<ValidateInput<InputDto>>();
             listValidateInput.Add(new ValidateShapeNameExists());
             listValidateInput.Add(new ValidateOperationNameExists());
             listValidateInput.Add(new ValidateSidesSeparatedByComma());
             return listValidateInput;
         }
 
-        public static List<ValidateAdapter> getValidateAdapter()
+        public static List<ValidateInput<Tuple<String, InputAdapterDto>>> getValidateInputAdapter()
         {
-            List<ValidateAdapter> listValidateAdapter = new List<ValidateAdapter>();
+            List<ValidateInput<Tuple<String, InputAdapterDto>>> listValidateAdapter = new List<ValidateInput<Tuple<String, InputAdapterDto>>>();
             listValidateAdapter.Add(new ValidateAmountOfSides());
             return listValidateAdapter;
         }
@@ -31,9 +33,9 @@ namespace ShapeCalculation.config
         public static List<ValidateValues<Double>> getValidateTriangleValues()
 
         {
-            List<ValidateValues<Double>> listValidateValues = getCommonValidateValues();
-            listValidateValues.Add(new ValidateSizeOfSidesInTriangle());
-            return listValidateValues;
+            List<ValidateValues<Double>> listValidateInputAdapter = new List<ValidateValues<Double>>();
+            listValidateInputAdapter.Add(new ValidateSizeOfSidesInTriangle());
+            return listValidateInputAdapter;
         }
 
         public static List<ValidateValues<Double>> getCommonValidateValues()

@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace ShapeCalculation.usecase.validation
+namespace ShapeCalculation.core.usecase.validation
 {
-    interface ValidateValues<Type>
+    public interface ValidateValues<Type>
     {
-        public void execute(params Type [] values);
+        public void execute(params Type[] values);
     }
 }

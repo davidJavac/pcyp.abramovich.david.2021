@@ -7,7 +7,7 @@ using ShapeCalculation.util;
 
 namespace ShapeCalculation.adapter.validation.implementation
 {
-    class ValidateShapeNameExists : ValidateInput
+    public class ValidateShapeNameExists : ValidateInput<InputDto>
     {
         public void execute(InputDto input)
         {

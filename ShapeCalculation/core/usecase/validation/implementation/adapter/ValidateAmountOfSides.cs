@@ -2,24 +2,24 @@
 using ShapeCalculation.adapter.exception;
 using System;
 using System.Collections.Generic;
-using System.Text;
 using ShapeCalculation.util;
+using ShapeCalculation.adapter.validation;
 
 namespace ShapeCalculation.usecase.validation.implementation
 {
-    class ValidateAmountOfSides : ValidateAdapter
+    class ValidateAmountOfSides : ValidateInput<Tuple<String, InputAdapterDto>>
     {
-        public void execute(InputAdapterDto inputAdapterDto)
+        public void execute(Tuple<String, InputAdapterDto> tuple)
         {
-            String shapeName = inputAdapterDto.Shape.getName();
-            List<Double> values = inputAdapterDto.Values;
+            String shapeName = tuple.Item1;
+            InputAdapterDto input = tuple.Item2;
 
             if ((shapeName.Equals(ApplicationConstants.ShapeName.SQUARE,
-                StringComparison.InvariantCultureIgnoreCase) && values.Count != 1) ||
+                StringComparison.InvariantCultureIgnoreCase) && input.Values.Count != 1) ||
                     (shapeName.Equals(ApplicationConstants.ShapeName.TRIANGLE,
-                    StringComparison.InvariantCultureIgnoreCase) && values.Count != 3) ||
+                    StringComparison.InvariantCultureIgnoreCase) && input.Values.Count != 3) ||
                         (shapeName.Equals(ApplicationConstants.ShapeName.RECTANGLE,
-                        StringComparison.InvariantCultureIgnoreCase) && values.Count != 2)
+                        StringComparison.InvariantCultureIgnoreCase) && input.Values.Count != 2)
                 )
             {
 
