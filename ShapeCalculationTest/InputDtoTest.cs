@@ -12,6 +12,14 @@ namespace ShapeCalculationTest
     public class InputDtoTest
     {
 
+        [TestMethod]
+        public void when_input_is_correct_then_validations_run_successfully()
+        {
+            InputDto input = new InputDto("triangle", "area", "2,2,2");
+
+            input.callValidations();
+        }
+
         [ExpectedException(typeof(InvalidShapeNameException))]
         [TestMethod]
         public void when_shape_does_not_exist_then_throw_exception()
