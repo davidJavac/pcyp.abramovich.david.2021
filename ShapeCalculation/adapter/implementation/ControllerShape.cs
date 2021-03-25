@@ -10,10 +10,11 @@ using ShapeCalculation.config;
 using System.Globalization;
 using ShapeCalculation.usecase.implementation;
 using ShapeCalculation.usecase;
+using ShapeCalculation.usecase.validation;
 
 namespace ShapeCalculation.adapter
 {
-    public class ControllerShape : ManageInput
+    public class ControllerShape : ValidationInvoker, ManageInput
     {
         private InputDto inputDto;
         private InputAdapterDto inputAdapterDto;
@@ -30,6 +31,7 @@ namespace ShapeCalculation.adapter
             {
                 inputDto.callValidations();
                 addValuesFromInputToAdapter();
+                invokeValidations();
 
                 Shape shape = ModuleConfig.createShape(inputDto.ShapeName, inputAdapterDto.Values);
 
@@ -46,6 +48,7 @@ namespace ShapeCalculation.adapter
             
         }
 
+
         private void addValuesFromInputToAdapter() {
 
             inputAdapterDto.Operation = inputDto.Operation;
@@ -61,11 +64,16 @@ namespace ShapeCalculation.adapter
         private OutputDto prepareErrorResponse(string message)
         {
             return new OutputDto(inputDto.ShapeName,
-                    inputDto.Operation,
-                    0,
-                    ApplicationConstants.Status.ERROR,
-                    message);
+                inputDto.Operation,
+                0,
+                ApplicationConstants.Status.ERROR,
+                message);
 
+        }
+        protected override void invokeValidations()
+        {
+            ModuleConfig.getValidateInputAdapter()
+                .ForEach(val => val.execute(new Tuple<string, InputAdapterDto>(inputDto.ShapeName, inputAdapterDto)));
         }
 
     }

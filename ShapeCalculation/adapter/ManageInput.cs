@@ -5,7 +5,7 @@ using System.Text;
 
 namespace ShapeCalculation.adapter
 {
-    interface ManageInput
+    public interface ManageInput
     {
         public OutputDto execute();
     }

@@ -46,14 +46,5 @@ namespace ShapeCalculationTest
             triangle.calculatePerimeter();
         }
 
-        [TestMethod]
-        [ExpectedException(typeof(NegativeValueException))]
-        public void when_at_least_one_side_is_0_or_less_than_0_then_it_should_throw_exception()
-        {
-
-            Triangle triangle = new Triangle(2, -2, 8);
-            triangle.calculateArea();
-            triangle.calculatePerimeter();
-        }
     }
 }

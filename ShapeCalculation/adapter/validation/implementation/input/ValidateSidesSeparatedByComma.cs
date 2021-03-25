@@ -7,7 +7,7 @@ using ShapeCalculation.util;
 
 namespace ShapeCalculation.adapter.validation.implementation
 {
-    class ValidateSidesSeparatedByComma : ValidateInput
+    public class ValidateSidesSeparatedByComma : ValidateInput<InputDto>
     {
         public void execute(InputDto input)
         {

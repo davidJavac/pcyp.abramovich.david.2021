@@ -4,7 +4,7 @@ using System.Text;
 
 namespace ShapeCalculation.usecase.dto
 {
-    class InputAdapterDto
+    public class InputAdapterDto
     {
         private Shape shape;
         private String operation;
@@ -23,5 +23,6 @@ namespace ShapeCalculation.usecase.dto
         public Shape Shape { get => shape; set => shape = value; }
         public string Operation { get => operation; set => operation = value; }
         public List<double> Values { get => values; set => values = value; }
+       
     }
 }

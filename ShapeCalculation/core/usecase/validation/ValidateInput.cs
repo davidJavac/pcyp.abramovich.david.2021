@@ -5,8 +5,8 @@ using ShapeCalculation.adapter.dto;
 
 namespace ShapeCalculation.adapter.validation
 {
-    interface ValidateInput
+    public interface ValidateInput<Input>
     {
-        public void execute(InputDto input);
+        public void execute(Input input);
     }
 }

@@ -7,7 +7,7 @@ using System;
 
 namespace ShapeCalculation.usecase.implementation
 {
-    class ShapeInteractor : ValidationInvoker, Interactor
+    public class ShapeInteractor : ValidationInvoker, Interactor
     {
         private Shape shape;
         private InputAdapterDto input;
@@ -20,7 +20,7 @@ namespace ShapeCalculation.usecase.implementation
 
                 invokeValidations();
 
-                shape = input.Shape;
+                shape = this.input.Shape;
 
                 double response = isAreaOperation(input.Operation) ? callAreaCalculation() : callPerimeterCalculation();
 
@@ -78,7 +78,7 @@ namespace ShapeCalculation.usecase.implementation
 
         protected override void invokeValidations()
         {
-            ModuleConfig.getValidateAdapter().ForEach(val => val.execute(this.input));
+            ModuleConfig.getCommonValidateValues().ForEach(val => val.execute(input.Values.ToArray()));
         }
 
     }

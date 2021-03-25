@@ -35,14 +35,5 @@ namespace ShapeCalculationTest
             Assert.AreEqual(expectedPerimeter, perimeter);
         }
 
-        [TestMethod]
-        [ExpectedException(typeof(NegativeValueException))]
-        public void when_at_least_one_side_is_0_or_less_than_0_then_it_should_throw_exception()
-        {
-
-            Square square = new Square(-2);
-            square.calculateArea();
-            square.calculatePerimeter();
-        }
     }
 }

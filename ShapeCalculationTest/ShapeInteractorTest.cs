@@ -5,28 +5,39 @@ using ShapeCalculation.adapter.dto;
 using System;
 using ShapeCalculation.usecase.dto;
 using ShapeCalculation.util;
+using ShapeCalculation.usecase;
+using ShapeCalculation.usecase.implementation;
+using System.Collections.Generic;
+using ShapeCalculation;
+using ShapeCalculation.config;
 
 namespace ShapeCalculationTest
 {
     [TestClass]
-    public class ControllerShapeTest
+    public class ShapeInteractorTest
     {
 
         [TestMethod]
         public void when_the_input_is_correct_then_it_should_return_a_successfull_response() {
 
+            String shapeName = ApplicationConstants.ShapeName.SQUARE;
+
             OutputDto expectedOutput = new OutputDto(
-                    ApplicationConstants.ShapeName.SQUARE,
+                    shapeName,
                     ApplicationConstants.Operation.AREA,
                     4,
                     ApplicationConstants.Status.SUCCESS,
                     "Operation ran successfully");
 
-            InputDto inputDto = new InputDto("square", "area", "2");
+            List<Double> values = new List<Double>();
+            values.Add(2);
 
-            ManageInput manageInput = new ControllerShape(inputDto);
+            Shape shape = ModuleConfig.createShape(shapeName, values);
+            InputAdapterDto input = new InputAdapterDto(shape, "area", values);
 
-            OutputDto response = manageInput.execute();
+            Interactor shapeInteractor = new ShapeInteractor();
+
+            OutputDto response = shapeInteractor.execute(input);
 
             Assert.IsNotNull(response);
             Assert.AreEqual(expectedOutput.Shape, response.Shape);
@@ -40,19 +51,31 @@ namespace ShapeCalculationTest
         [TestMethod]
         public void when_the_input_is_not_correct_then_it_should_return_an_error_response()
         {
+            String shapeName = "triangle";
+            String operation = "area";
 
             OutputDto expectedOutput = new OutputDto(
-                    "squar",
+                    shapeName,
                     ApplicationConstants.Operation.AREA,
                     0,
                     ApplicationConstants.Status.ERROR,
-                    "The name of the shape is not valid");
+                    "The values of the sides must not be negative");
 
-            InputDto inputDto = new InputDto("squar", "area", "2");
+            double valueA = 2;
+            double valueB = -1;
+            double valueC = 2;
 
-            ManageInput manageInput = new ControllerShape(inputDto);
+            List<Double> values = new List<Double>();
+            values.Add(valueA);
+            values.Add(valueB);
+            values.Add(valueC);
 
-            OutputDto response = manageInput.execute();
+            Shape shape = new Triangle(valueA, valueB, valueC);
+            InputAdapterDto input = new InputAdapterDto(shape, operation, values);
+
+            Interactor shapeInteractor = new ShapeInteractor();
+
+            OutputDto response = shapeInteractor.execute(input);
 
             Assert.IsNotNull(response);
             Assert.AreEqual(expectedOutput.Shape, response.Shape);
