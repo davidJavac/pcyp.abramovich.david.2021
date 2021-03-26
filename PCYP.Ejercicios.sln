@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31105.61
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ShapeCalculation", "ShapeCalculation\ShapeCalculation.csproj", "{6AEF9335-6E4E-4D0A-8927-358FBE360B33}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Clase1.Ejercicio1.Shape", "ShapeCalculation\Clase1.Ejercicio1.Shape.csproj", "{6AEF9335-6E4E-4D0A-8927-358FBE360B33}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShapeCalculationTest", "ShapeCalculationTest\ShapeCalculationTest.csproj", "{4F9C4186-0F8E-4472-B5C8-F0E5B996029C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Clase.Ejercicio1.Shape.Test", "ShapeCalculationTest\Clase.Ejercicio1.Shape.Test.csproj", "{4F9C4186-0F8E-4472-B5C8-F0E5B996029C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -1,4 +1,5 @@
-﻿using ShapeCalculation.adapter.view;
+﻿using ShapeCalculation.adapter;
+using ShapeCalculation.adapter.view;
 using ShapeCalculation.adapter.view.implementation;
 using ShapeCalculation.usecase.dto;
 using System;
