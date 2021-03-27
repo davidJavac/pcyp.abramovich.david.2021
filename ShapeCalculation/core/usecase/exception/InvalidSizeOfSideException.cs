@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace ShapeCalculation.usecase.exception
+namespace Clase1Ejercicio2Vial.usecase.exception
 {
     public class InvalidSizeOfSideException : Exception
     {

@@ -1,10 +1,10 @@
-﻿using ShapeCalculation.usecase.validation;
-using ShapeCalculation.config;
+﻿using Clase1Ejercicio2Vial.usecase.validation;
+using Clase1Ejercicio2Vial.config;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace ShapeCalculation.adapter.dto
+namespace Clase1Ejercicio2Vial.adapter.dto
 {
     public class InputDto : ValidationInvoker
     {

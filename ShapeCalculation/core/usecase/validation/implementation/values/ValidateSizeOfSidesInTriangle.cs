@@ -1,12 +1,12 @@
-﻿using ShapeCalculation.adapter.validation;
-using ShapeCalculation.core.usecase.validation;
-using ShapeCalculation.usecase.dto;
-using ShapeCalculation.usecase.exception;
+﻿using Clase1Ejercicio2Vial.adapter.validation;
+using Clase1Ejercicio2Vial.core.usecase.validation;
+using Clase1Ejercicio2Vial.usecase.dto;
+using Clase1Ejercicio2Vial.usecase.exception;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace ShapeCalculation.usecase.validation.implementation
+namespace Clase1Ejercicio2Vial.usecase.validation.implementation
 {
     class ValidateSizeOfSidesInTriangle : ValidateValues<Double>
     {

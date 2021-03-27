@@ -1,18 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using ShapeCalculation.usecase.dto;
-using ShapeCalculation.adapter.dto;
-using ShapeCalculation.util;
-using ShapeCalculation.adapter.exception;
-using ShapeCalculation.adapter.validation;
-using ShapeCalculation.config;
+using Clase1Ejercicio2Vial.usecase.dto;
+using Clase1Ejercicio2Vial.adapter.dto;
+using Clase1Ejercicio2Vial.util;
+using Clase1Ejercicio2Vial.adapter.exception;
+using Clase1Ejercicio2Vial.adapter.validation;
+using Clase1Ejercicio2Vial.config;
 using System.Globalization;
-using ShapeCalculation.usecase.implementation;
-using ShapeCalculation.usecase;
-using ShapeCalculation.usecase.validation;
+using Clase1Ejercicio2Vial.usecase.implementation;
+using Clase1Ejercicio2Vial.usecase;
+using Clase1Ejercicio2Vial.usecase.validation;
 
-namespace ShapeCalculation.adapter
+namespace Clase1Ejercicio2Vial.adapter
 {
     public class ControllerShape : ValidationInvoker, ManageInput
     {

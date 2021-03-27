@@ -1,10 +1,10 @@
-﻿using ShapeCalculation.adapter.dto;
-using ShapeCalculation.usecase.dto;
+﻿using Clase1Ejercicio2Vial.adapter.dto;
+using Clase1Ejercicio2Vial.usecase.dto;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace ShapeCalculation.adapter.view.implementation
+namespace Clase1Ejercicio2Vial.adapter.view.implementation
 {
     class ConsoleView : ViewPresenter
     {

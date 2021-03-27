@@ -1,17 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using ShapeCalculation.adapter;
-using ShapeCalculation.adapter.dto;
-using ShapeCalculation.adapter.validation;
-using ShapeCalculation.adapter.validation.implementation;
-using ShapeCalculation.core.usecase.validation;
-using ShapeCalculation.usecase.dto;
-using ShapeCalculation.usecase.validation;
-using ShapeCalculation.usecase.validation.implementation;
+using Clase1Ejercicio2Vial.adapter;
+using Clase1Ejercicio2Vial.adapter.dto;
+using Clase1Ejercicio2Vial.adapter.validation;
+using Clase1Ejercicio2Vial.adapter.validation.implementation;
+using Clase1Ejercicio2Vial.core.usecase.validation;
+using Clase1Ejercicio2Vial.usecase.dto;
+using Clase1Ejercicio2Vial.usecase.validation;
+using Clase1Ejercicio2Vial.usecase.validation.implementation;
 
 
-namespace ShapeCalculation.config
+namespace Clase1Ejercicio2Vial.config
 {
     public class ModuleConfig
     {

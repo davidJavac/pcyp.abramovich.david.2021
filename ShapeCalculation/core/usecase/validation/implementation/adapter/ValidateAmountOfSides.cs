@@ -1,11 +1,11 @@
-﻿using ShapeCalculation.usecase.dto;
-using ShapeCalculation.adapter.exception;
+﻿using Clase1Ejercicio2Vial.usecase.dto;
+using Clase1Ejercicio2Vial.adapter.exception;
 using System;
 using System.Collections.Generic;
-using ShapeCalculation.util;
-using ShapeCalculation.adapter.validation;
+using Clase1Ejercicio2Vial.util;
+using Clase1Ejercicio2Vial.adapter.validation;
 
-namespace ShapeCalculation.usecase.validation.implementation
+namespace Clase1Ejercicio2Vial.usecase.validation.implementation
 {
     class ValidateAmountOfSides : ValidateInput<Tuple<String, InputAdapterDto>>
     {

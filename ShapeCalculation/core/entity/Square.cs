@@ -1,10 +1,10 @@
-﻿using ShapeCalculation.config;
-using ShapeCalculation.util;
+﻿using Clase1Ejercicio2Vial.config;
+using Clase1Ejercicio2Vial.util;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace ShapeCalculation
+namespace Clase1Ejercicio2Vial
 {
     public class Square : Shape
     {

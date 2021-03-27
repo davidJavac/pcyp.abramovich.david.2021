@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace ShapeCalculation.util
+namespace Clase1Ejercicio2Vial.util
 {
     public class ApplicationConstants
     {

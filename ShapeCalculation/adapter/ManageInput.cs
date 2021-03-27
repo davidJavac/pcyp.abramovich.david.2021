@@ -1,9 +1,9 @@
-﻿using ShapeCalculation.usecase.dto;
+﻿using Clase1Ejercicio2Vial.usecase.dto;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace ShapeCalculation.adapter
+namespace Clase1Ejercicio2Vial.adapter
 {
     public interface ManageInput
     {

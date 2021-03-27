@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace ShapeCalculation.adapter.exception
+namespace Clase1Ejercicio2Vial.adapter.exception
 {
     public class InvalidOperationNameException : Exception
     {

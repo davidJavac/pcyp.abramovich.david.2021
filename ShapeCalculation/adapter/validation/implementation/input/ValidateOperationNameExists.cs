@@ -1,11 +1,11 @@
-﻿using ShapeCalculation.adapter.dto;
-using ShapeCalculation.adapter.exception;
+﻿using Clase1Ejercicio2Vial.adapter.dto;
+using Clase1Ejercicio2Vial.adapter.exception;
 using System;
 using System.Collections.Generic;
 using System.Text;
-using ShapeCalculation.util;
+using Clase1Ejercicio2Vial.util;
 
-namespace ShapeCalculation.adapter.validation.implementation
+namespace Clase1Ejercicio2Vial.adapter.validation.implementation
 {
     public class ValidateOperationNameExists : ValidateInput<InputDto>
     {
