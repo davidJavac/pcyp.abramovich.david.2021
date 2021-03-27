@@ -1,7 +1,7 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using ShapeCalculation;
-using ShapeCalculation.usecase;
-using ShapeCalculation.usecase.exception;
+using Clase1Ejercicio2Vial;
+using Clase1Ejercicio2Vial.usecase;
+using Clase1Ejercicio2Vial.usecase.exception;
 using System;
 
 namespace ShapeCalculationTest

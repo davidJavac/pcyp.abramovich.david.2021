@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using ShapeCalculation.adapter.dto;
+using Clase1Ejercicio2Vial.adapter.dto;
 
-namespace ShapeCalculation.adapter.validation
+namespace Clase1Ejercicio2Vial.adapter.validation
 {
     public interface ValidateInput<Input>
     {

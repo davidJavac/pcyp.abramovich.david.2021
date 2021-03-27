@@ -1,11 +1,11 @@
-﻿using ShapeCalculation.config;
-using ShapeCalculation.usecase.dto;
-using ShapeCalculation.usecase.validation;
-using ShapeCalculation.util;
+﻿using Clase1Ejercicio2Vial.config;
+using Clase1Ejercicio2Vial.usecase.dto;
+using Clase1Ejercicio2Vial.usecase.validation;
+using Clase1Ejercicio2Vial.util;
 using System;
 
 
-namespace ShapeCalculation.usecase.implementation
+namespace Clase1Ejercicio2Vial.usecase.implementation
 {
     public class ShapeInteractor : ValidationInvoker, Interactor
     {

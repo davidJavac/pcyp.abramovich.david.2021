@@ -1,11 +1,11 @@
-﻿using ShapeCalculation.adapter.dto;
-using ShapeCalculation.adapter.exception;
-using ShapeCalculation.usecase;
+﻿using Clase1Ejercicio2Vial.adapter.dto;
+using Clase1Ejercicio2Vial.adapter.exception;
+using Clase1Ejercicio2Vial.usecase;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace ShapeCalculation.config
+namespace Clase1Ejercicio2Vial.config
 {
     class FactoryShape : Factory
     {

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace ShapeCalculation.usecase.dto
+namespace Clase1Ejercicio2Vial.usecase.dto
 {
     public class InputAdapterDto
     {

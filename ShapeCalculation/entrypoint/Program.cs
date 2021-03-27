@@ -1,10 +1,10 @@
 ﻿using System;
-using ShapeCalculation.adapter;
-using ShapeCalculation.adapter.dto;
-using ShapeCalculation.adapter.implementation;
-using ShapeCalculation.usecase.dto;
+using Clase1Ejercicio2Vial.adapter;
+using Clase1Ejercicio2Vial.adapter.dto;
+using Clase1Ejercicio2Vial.adapter.implementation;
+using Clase1Ejercicio2Vial.usecase.dto;
 
-namespace ShapeCalculation
+namespace Clase1Ejercicio2Vial
 {
     class Program
     {

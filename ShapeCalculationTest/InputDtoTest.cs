@@ -1,9 +1,9 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using ShapeCalculation;
-using ShapeCalculation.adapter.dto;
-using ShapeCalculation.adapter.exception;
-using ShapeCalculation.adapter.validation.implementation;
-using ShapeCalculation.usecase.exception;
+using Clase1Ejercicio2Vial;
+using Clase1Ejercicio2Vial.adapter.dto;
+using Clase1Ejercicio2Vial.adapter.exception;
+using Clase1Ejercicio2Vial.adapter.validation.implementation;
+using Clase1Ejercicio2Vial.usecase.exception;
 using System;
 
 namespace ShapeCalculationTest

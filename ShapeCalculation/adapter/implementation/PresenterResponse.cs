@@ -1,12 +1,12 @@
-﻿using ShapeCalculation.adapter;
-using ShapeCalculation.adapter.view;
-using ShapeCalculation.adapter.view.implementation;
-using ShapeCalculation.usecase.dto;
+﻿using Clase1Ejercicio2Vial.adapter;
+using Clase1Ejercicio2Vial.adapter.view;
+using Clase1Ejercicio2Vial.adapter.view.implementation;
+using Clase1Ejercicio2Vial.usecase.dto;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace ShapeCalculation.adapter.implementation
+namespace Clase1Ejercicio2Vial.adapter.implementation
 {
     class PresenterResponse : ManageOutput
     {

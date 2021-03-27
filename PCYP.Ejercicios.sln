@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Clase1.Ejercicio1.Shape", "
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Clase.Ejercicio1.Shape.Test", "ShapeCalculationTest\Clase.Ejercicio1.Shape.Test.csproj", "{4F9C4186-0F8E-4472-B5C8-F0E5B996029C}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Clase1.Ejercicio2.Vial", "Clase1.Ejercicio2.Vial\Clase1.Ejercicio2.Vial.csproj", "{D9163B94-4C70-4178-B328-6F945B8D6A17}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{4F9C4186-0F8E-4472-B5C8-F0E5B996029C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4F9C4186-0F8E-4472-B5C8-F0E5B996029C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4F9C4186-0F8E-4472-B5C8-F0E5B996029C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D9163B94-4C70-4178-B328-6F945B8D6A17}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D9163B94-4C70-4178-B328-6F945B8D6A17}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D9163B94-4C70-4178-B328-6F945B8D6A17}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D9163B94-4C70-4178-B328-6F945B8D6A17}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
