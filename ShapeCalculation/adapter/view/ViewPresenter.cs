@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Clase1Ejercicio2Vial.adapter.view
+namespace Clase1Ejercicio1Shape.adapter.view
 {
     interface ViewPresenter
     {

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using Clase1Ejercicio2Vial.adapter.dto;
 
-namespace Clase1Ejercicio2Vial.adapter.validation
+namespace Clase1Ejercicio1Shape.adapter.validation
 {
     public interface ValidateInput<Input>
     {

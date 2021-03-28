@@ -12,7 +12,7 @@ using Clase1Ejercicio2Vial.usecase.implementation;
 using Clase1Ejercicio2Vial.usecase;
 using Clase1Ejercicio2Vial.usecase.validation;
 
-namespace Clase1Ejercicio2Vial.adapter
+namespace Clase1Ejercicio1Shape.adapter
 {
     public class ControllerShape : ValidationInvoker, ManageInput
     {

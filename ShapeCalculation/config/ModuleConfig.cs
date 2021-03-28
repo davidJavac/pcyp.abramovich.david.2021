@@ -11,7 +11,7 @@ using Clase1Ejercicio2Vial.usecase.validation;
 using Clase1Ejercicio2Vial.usecase.validation.implementation;
 
 
-namespace Clase1Ejercicio2Vial.config
+namespace Clase1Ejercicio1Shape.config
 {
     public class ModuleConfig
     {

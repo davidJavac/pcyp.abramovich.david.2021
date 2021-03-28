@@ -4,7 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Clase1Ejercicio2Vial.adapter.view.implementation
+namespace Clase1Ejercicio1Shape.adapter.view.implementation
 {
     class ConsoleView : ViewPresenter
     {

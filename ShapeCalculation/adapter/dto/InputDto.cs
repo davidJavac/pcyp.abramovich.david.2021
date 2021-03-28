@@ -4,7 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Clase1Ejercicio2Vial.adapter.dto
+namespace Clase1Ejercicio1Shape.adapter.dto
 {
     public class InputDto : ValidationInvoker
     {

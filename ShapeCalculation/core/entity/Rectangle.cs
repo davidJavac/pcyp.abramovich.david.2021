@@ -4,7 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Clase1Ejercicio2Vial.usecase
+namespace Clase1Ejercicio1Shape.usecase
 {
     public class Rectangle : Shape
     {

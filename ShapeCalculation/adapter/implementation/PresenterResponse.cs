@@ -6,7 +6,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Clase1Ejercicio2Vial.adapter.implementation
+namespace Clase1Ejercicio1Shape.adapter.implementation
 {
     class PresenterResponse : ManageOutput
     {

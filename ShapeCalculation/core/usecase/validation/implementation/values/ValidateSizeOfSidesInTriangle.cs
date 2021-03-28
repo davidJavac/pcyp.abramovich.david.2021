@@ -6,7 +6,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Clase1Ejercicio2Vial.usecase.validation.implementation
+namespace Clase1Ejercicio1Shape.usecase.validation.implementation
 {
     class ValidateSizeOfSidesInTriangle : ValidateValues<Double>
     {

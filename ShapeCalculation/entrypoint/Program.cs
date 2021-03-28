@@ -4,7 +4,7 @@ using Clase1Ejercicio2Vial.adapter.dto;
 using Clase1Ejercicio2Vial.adapter.implementation;
 using Clase1Ejercicio2Vial.usecase.dto;
 
-namespace Clase1Ejercicio2Vial
+namespace Clase1Ejercicio1Shape
 {
     class Program
     {
