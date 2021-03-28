@@ -7,6 +7,7 @@ using Clase1Ejercicio2Vial.usecase.dto;
 using Clase1Ejercicio2Vial.util;
 using Clase1.Ejercicio2.Vial.core.usecase.dto;
 using System.Collections.Generic;
+using Clase1Ejercicio2Vial.core.entity;
 
 namespace Clase1.Ejercicio2.Vial.Test
 {
