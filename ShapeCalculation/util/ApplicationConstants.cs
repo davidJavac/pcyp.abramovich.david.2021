@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Clase1Ejercicio2Vial.util
+namespace Clase1Ejercicio1Shape.util
 {
     public class ApplicationConstants
     {

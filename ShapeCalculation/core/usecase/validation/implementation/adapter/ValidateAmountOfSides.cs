@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using Clase1Ejercicio2Vial.util;
 using Clase1Ejercicio2Vial.adapter.validation;
 
-namespace Clase1Ejercicio2Vial.usecase.validation.implementation
+namespace Clase1Ejercicio1Shape.usecase.validation.implementation
 {
     class ValidateAmountOfSides : ValidateInput<Tuple<String, InputAdapterDto>>
     {

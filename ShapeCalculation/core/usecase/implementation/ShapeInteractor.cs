@@ -5,7 +5,7 @@ using Clase1Ejercicio2Vial.util;
 using System;
 
 
-namespace Clase1Ejercicio2Vial.usecase.implementation
+namespace Clase1Ejercicio1Shape.usecase.implementation
 {
     public class ShapeInteractor : ValidationInvoker, Interactor
     {

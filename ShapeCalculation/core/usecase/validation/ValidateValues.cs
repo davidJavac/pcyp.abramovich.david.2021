@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Clase1Ejercicio2Vial.core.usecase.validation
+namespace Clase1Ejercicio1Shape.core.usecase.validation
 {
     public interface ValidateValues<Type>
     {

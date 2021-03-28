@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Clase1Ejercicio2Vial.adapter.exception
+namespace Clase1Ejercicio1Shape.adapter.exception
 {
     public class InvalidSidesDefinitionException : Exception
     {

@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using System.Text;
 using Clase1Ejercicio2Vial.util;
 
-namespace Clase1Ejercicio2Vial.adapter.validation.implementation
+namespace Clase1Ejercicio1Shape.adapter.validation.implementation
 {
     public class ValidateSidesSeparatedByComma : ValidateInput<InputDto>
     {

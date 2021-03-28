@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Clase1Ejercicio2Vial.usecase.dto
+namespace Clase1Ejercicio1Shape.usecase.dto
 {
     public class OutputDto
     {
