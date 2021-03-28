@@ -1,7 +1,6 @@
 ﻿using Clase1Ejercicio2Vial.core.entity;
 using System;
 using System.Collections.Generic;
-using System.Text;
 
 namespace Clase1Ejercicio2Vial.usecase.dto
 {

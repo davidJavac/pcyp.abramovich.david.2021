@@ -9,7 +9,7 @@ using System.Collections.Generic;
 
 namespace Clase1Ejercicio2Vial.usecase.implementation
 {
-    public class FileVialReader : ValidationInvoker, Interactor
+    public class FileVialReader : Interactor
     {
         private InputAdapterDto input;
         private GetAllVialRepository getAllVialRepository;
@@ -50,10 +50,6 @@ namespace Clase1Ejercicio2Vial.usecase.implementation
 
         private GetAllVialRepository createGetAllVialRepository() {
             return ModuleConfig.getAllVialRepository();
-        }
-
-        protected override void invokeValidations()
-        {
         }
 
     }

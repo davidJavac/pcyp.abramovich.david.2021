@@ -1,17 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
 using Clase1Ejercicio2Vial.usecase.dto;
 using Clase1Ejercicio2Vial.adapter.dto;
 using Clase1Ejercicio2Vial.util;
-using Clase1Ejercicio2Vial.adapter.exception;
 using Clase1Ejercicio2Vial.config;
-using System.Globalization;
 using Clase1Ejercicio2Vial.usecase.implementation;
 using Clase1Ejercicio2Vial.usecase;
 using Clase1Ejercicio2Vial.usecase.validation;
 using System.IO;
-using Clase1.Ejercicio2.Vial.core.usecase.dto;
 using Clase1Ejercicio2Vial.core.entity;
 
 namespace Clase1Ejercicio2Vial.adapter

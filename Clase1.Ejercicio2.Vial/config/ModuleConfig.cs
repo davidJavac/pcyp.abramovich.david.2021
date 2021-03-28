@@ -1,10 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Collections.Generic;
 using Clase1.Ejercicio2.Vial.core.repository;
 using Clase1.Ejercicio2.Vial.repository;
 using Clase1Ejercicio2Vial.adapter.dto;
-using Clase1Ejercicio2Vial.core.usecase.validation;
 using Clase1Ejercicio2Vial.usecase.dto;
 using Clase1Ejercicio2Vial.usecase.validation;
 using Clase1Ejercicio2Vial.usecase.validation.implementation;

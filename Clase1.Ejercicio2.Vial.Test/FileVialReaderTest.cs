@@ -1,13 +1,8 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Clase1Ejercicio2Vial.adapter;
-using Clase1Ejercicio2Vial.adapter.exception;
-using Clase1Ejercicio2Vial.adapter.dto;
 using System;
 using Clase1Ejercicio2Vial.usecase.dto;
 using Clase1Ejercicio2Vial.util;
-using Clase1.Ejercicio2.Vial.core.usecase.dto;
 using System.Collections.Generic;
-using Clase1.Ejercicio2.Vial.core.repository;
 using Clase1Ejercicio2Vial.usecase;
 using Clase1Ejercicio2Vial.usecase.implementation;
 using System.IO;
