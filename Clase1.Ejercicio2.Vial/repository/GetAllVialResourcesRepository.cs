@@ -15,27 +15,27 @@ namespace Clase1.Ejercicio2.Vial.repository
         {
             ConcurrentQueue<VialDto> threadSafeCollection = new ConcurrentQueue<VialDto>();
 
-            Parallel.ForEach(File.ReadLines(path), (line, _, lineNumber) =>
+            try
             {
-                try
+                Parallel.ForEach(File.ReadLines(path), (line, _, lineNumber) =>
                 {
-                    String[] fields = line.Split(",");
+                        String[] fields = line.Split(",");
 
-                    int n_sheet = Int32.Parse(fields[0]);
-                    String objectType = fields[1];
-                    int idSection = Int32.Parse(fields[2]);
-                    String pathType = fields[3];
-                    int lenght = Int32.Parse(fields[4]);
+                        int n_sheet = Int32.Parse(fields[0]);
+                        String objectType = fields[1];
+                        int idSection = Int32.Parse(fields[2]);
+                        String pathType = fields[3];
+                        int lenght = Int32.Parse(fields[4]);
 
-                    VialDto vialDto = new VialDto(n_sheet, objectType, idSection, pathType, lenght);
+                        VialDto vialDto = new VialDto(n_sheet, objectType, idSection, pathType, lenght);
 
-                    threadSafeCollection.Enqueue(vialDto);
+                        threadSafeCollection.Enqueue(vialDto);
                                
-                }
-                catch (Exception e) {
-                    throw new RepositoryException(e.Message);
-                }
-            });
+                });
+            }
+            catch (Exception e) {
+                throw new RepositoryException(e.Message);
+            }
 
             return fromConcurrentQueueToListVialDto(threadSafeCollection);
         }

@@ -20,17 +20,11 @@ namespace Clase1Ejercicio2Vial.adapter.dto
         public void callValidations() {
             try
             {
-                normalize();
                 this.invokeValidations();
             }
             catch (Exception e) {
                 throw e;
             }
-        }
-
-        private void normalize() {
-            FileName = FileName.ToLower();
-     
         }
 
         protected override void invokeValidations() {

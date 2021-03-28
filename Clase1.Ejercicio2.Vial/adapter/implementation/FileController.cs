@@ -53,7 +53,7 @@ namespace Clase1Ejercicio2Vial.adapter
             inputAdapterDto.Path = absolutePath;
         }
 
-        private OutputVialDto prepareErrorResponse(string message)
+        private Output prepareErrorResponse(string message)
         {
             return new OutputVialDto(
                 new List<VialDto>(),
