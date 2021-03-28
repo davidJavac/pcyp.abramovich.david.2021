@@ -1,4 +1,4 @@
-﻿using Clase1.Ejercicio2.Vial.core.usecase.dto;
+﻿using Clase1Ejercicio2Vial.core.entity;
 using System;
 using System.Collections.Generic;
 using System.Text;
