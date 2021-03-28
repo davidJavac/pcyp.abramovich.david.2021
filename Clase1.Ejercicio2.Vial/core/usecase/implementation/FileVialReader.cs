@@ -1,6 +1,6 @@
 ﻿using Clase1.Ejercicio2.Vial.core.repository;
-using Clase1.Ejercicio2.Vial.core.usecase.dto;
 using Clase1Ejercicio2Vial.config;
+using Clase1Ejercicio2Vial.core.entity;
 using Clase1Ejercicio2Vial.usecase.dto;
 using Clase1Ejercicio2Vial.usecase.validation;
 using Clase1Ejercicio2Vial.util;
@@ -19,8 +19,6 @@ namespace Clase1Ejercicio2Vial.usecase.implementation
             try
             {
                 this.input = input;
-
-                invokeValidations();
 
                 getAllVialRepository = createGetAllVialRepository();
 
@@ -56,7 +54,6 @@ namespace Clase1Ejercicio2Vial.usecase.implementation
 
         protected override void invokeValidations()
         {
-            //ModuleConfig.getCommonValidateValues().ForEach(val => val.execute(input.Values.ToArray()));
         }
 
     }

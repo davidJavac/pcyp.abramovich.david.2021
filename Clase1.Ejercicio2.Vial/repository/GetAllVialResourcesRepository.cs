@@ -1,7 +1,8 @@
 ﻿using Clase1.Ejercicio2.Vial.core.repository;
-using Clase1.Ejercicio2.Vial.core.usecase.dto;
+using Clase1Ejercicio2Vial.core.entity;
 using Clase1Ejercicio2Vial.repository.exception;
 using System;
+using Clase1Ejercicio2Vial.core.entity;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.IO;
@@ -27,7 +28,7 @@ namespace Clase1.Ejercicio2.Vial.repository
                         String pathType = fields[3];
                         int lenght = Int32.Parse(fields[4]);
 
-                        VialDto vialDto = new VialDto(n_sheet, objectType, idSection, pathType, lenght);
+                    VialDto vialDto = new VialDto(n_sheet, objectType, idSection, pathType, lenght);
 
                         threadSafeCollection.Enqueue(vialDto);
                                
@@ -40,8 +41,8 @@ namespace Clase1.Ejercicio2.Vial.repository
             return fromConcurrentQueueToListVialDto(threadSafeCollection);
         }
 
-        private List<VialDto> fromConcurrentQueueToListVialDto(ConcurrentQueue<VialDto> queue) { 
-        
+        private List<VialDto> fromConcurrentQueueToListVialDto(ConcurrentQueue<VialDto> queue) {
+
             List<VialDto> listVialDto = new List<VialDto>();
 
             while (!queue.IsEmpty) {

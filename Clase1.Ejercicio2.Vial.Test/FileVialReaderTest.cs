@@ -11,6 +11,7 @@ using Clase1.Ejercicio2.Vial.core.repository;
 using Clase1Ejercicio2Vial.usecase;
 using Clase1Ejercicio2Vial.usecase.implementation;
 using System.IO;
+using Clase1Ejercicio2Vial.core.entity;
 
 namespace Clase1.Ejercicio2.Vial.Test
 {
@@ -18,8 +19,6 @@ namespace Clase1.Ejercicio2.Vial.Test
     public class FileVialReaderTest
     {
         private VialDto expectedVial;
-        private InputAdapterDto input;
-        private GetAllVialRepository getAllVialRepository;
 
         [TestInitialize]
         public void TestInitialize()

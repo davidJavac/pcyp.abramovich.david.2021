@@ -1,8 +1,8 @@
 ﻿using System;
 
-namespace Clase1.Ejercicio2.Vial.core.usecase.entity
+namespace Clase1Ejercicio2Vial.core.entity
 {
-    class Vial
+    public class VialDto
     {
         private int n_sheet;
         private String objectType;
@@ -10,8 +10,7 @@ namespace Clase1.Ejercicio2.Vial.core.usecase.entity
         private String pathType;
         private long lenght;
 
-        public Vial(int n_sheet, String objectType, int idSection, String pathType, long lenght)
-        {
+        public VialDto(int n_sheet, String objectType, int idSection, String pathType, long lenght) {
             this.n_sheet = n_sheet;
             this.objectType = objectType;
             this.idSection = idSection;

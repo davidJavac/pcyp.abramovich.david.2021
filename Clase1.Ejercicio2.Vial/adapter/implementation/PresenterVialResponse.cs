@@ -1,6 +1,7 @@
 ﻿using Clase1.Ejercicio2.Vial.core.usecase.dto;
 using Clase1Ejercicio2Vial.adapter.view;
 using Clase1Ejercicio2Vial.adapter.view.implementation;
+using Clase1Ejercicio2Vial.core.entity;
 using Clase1Ejercicio2Vial.usecase.dto;
 using Clase1Ejercicio2Vial.util;
 using System;
