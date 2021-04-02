@@ -14,13 +14,13 @@ namespace Clase3.Ejercicio3.WordsCount.interface_adapter.view.implementation
         {
             Dictionary<String, int> response = (Dictionary<String, int>)output.getResponse();
 
-            Console.WriteLine("Response message: " + output.Message);
+            Console.WriteLine("Response message: " + output.Message + "\n");
 
             foreach (KeyValuePair<String, int> entry in response) {
 
                 Console.WriteLine(entry.Key + " " + entry.Value);
             }
-            Console.WriteLine("size: " + response.Count);
+            Console.WriteLine("\nsize: " + response.Count);
         }
     }
 }

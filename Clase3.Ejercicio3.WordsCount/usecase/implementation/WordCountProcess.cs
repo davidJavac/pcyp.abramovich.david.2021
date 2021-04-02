@@ -29,18 +29,23 @@ namespace Clase3.Ejercicio3.WordsCount.usecase.implementation
             
             words.ForEach(word =>
             {
-                if (!wordsOcurrences.ContainsKey(word))
-                {
-                    wordsOcurrences.Add(word, 1);
-                }
-                else {
-                    int cont;
-                    wordsOcurrences.TryGetValue(word, out cont);
-                    wordsOcurrences[word] = cont + 1;
-                }
+                incrementOcurrences(wordsOcurrences, word);
             });
 
             return wordsOcurrences;
+        }
+
+        private void incrementOcurrences(Dictionary<String, int> wordsOcurrences, String word) { 
+        
+            if (!wordsOcurrences.ContainsKey(word))
+            {
+                wordsOcurrences.Add(word, 1);
+            }
+            else {
+                int cont;
+                wordsOcurrences.TryGetValue(word, out cont);
+                wordsOcurrences[word] = cont + 1;
+            }
         }
     }
 }
