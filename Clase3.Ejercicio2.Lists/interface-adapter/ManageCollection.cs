@@ -1,4 +1,5 @@
 ﻿using Clase3.Ejercicio2.Lists.usecase.dto;
+using Clase3.Ejercicio2.Lists.usecase.dto.implementation;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,6 +10,6 @@ namespace Clase3.Ejercicio2.Lists.interface_adapter
 {
     interface ManageCollection
     {
-        public void execute(Input input);
+        public void execute(InputDto input);
     }
 }
