@@ -9,6 +9,6 @@ namespace Clase3.Ejercicio1.Dictionary.usecase
 {
     interface CollectionProcess
     {
-        public void execute(Input input);
+        public Output execute(Input input);
     }
 }

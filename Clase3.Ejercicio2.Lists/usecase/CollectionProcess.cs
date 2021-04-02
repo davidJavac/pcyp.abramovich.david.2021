@@ -9,6 +9,6 @@ namespace Clase3.Ejercicio2.Lists.usecase
 {
     interface CollectionProcess
     {
-        public void execute(Input input);
+        public Output execute(Input input);
     }
 }
