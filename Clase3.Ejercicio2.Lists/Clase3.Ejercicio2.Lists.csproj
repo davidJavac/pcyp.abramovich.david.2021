@@ -5,10 +5,4 @@
     <TargetFramework>net5.0</TargetFramework>
   </PropertyGroup>
 
-  <ItemGroup>
-    <Folder Include="interface-adapter\view\implementation\" />
-    <Folder Include="usecase\dto\implementation\" />
-    <Folder Include="usecase\implementation\" />
-  </ItemGroup>
-
 </Project>
