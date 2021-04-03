@@ -31,9 +31,9 @@ namespace Clase3.Ejercicio4.Netflix.adapter
                 addValuesFromInputToAdapter();
                 invokeValidations();
 
-                Interactor fileVialReader = new FileVialReader();
+                Interactor fileNetflixRatingReader = new FileNetflixRatingReader();
 
-                return fileVialReader.execute(inputAdapterDto);
+                return fileNetflixRatingReader.execute(inputAdapterDto);
             }
             catch (Exception e) {
 

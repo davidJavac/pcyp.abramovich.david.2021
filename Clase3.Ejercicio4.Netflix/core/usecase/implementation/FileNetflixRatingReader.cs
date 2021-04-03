@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace Clase3.Ejercicio4.Netflix.usecase.implementation
 {
-    public class FileVialReader : Interactor
+    public class FileNetflixRatingReader : Interactor
     {
         private InputAdapterDto input;
         private GetAllNetflixRatingRepository getAllNetflixRatingRepository;
